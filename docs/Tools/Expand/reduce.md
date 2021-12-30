@@ -18,7 +18,11 @@ table.reduce = function (list, fn, init)
    end
    return acc
 end
+```
 
+压缩版本
+
+```lua
 table.reduce = function (b,c,d)local e=d;for f,g in ipairs(b)do if 1==f and not d then e=g else e=c(e,g)end end;return e end
 ```
 
