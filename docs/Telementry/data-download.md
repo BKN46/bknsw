@@ -4,15 +4,15 @@ Python3.5+ Flask框架后端
 读入输入后写入csv：
 
 ```python
-from flask import Flask, request
+from flask import Flask, request
 
-app = Flask(__name__)
+app = Flask(__name__)
 
 @app.route("/send")
-def get_info():
-    value = request.args.get("value")    
-    print(f"{value}",file=open("data.csv", "a"))
-    return "done"
+def get_info():
+    value = request.args.get("value")    
+    print(f"{value}",file=open("data.csv", "a"))
+    return "done"
 ```
 
 ## 直接发送数据
