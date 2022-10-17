@@ -45,6 +45,7 @@ function bezierCurve(e,h)local b={}for f=0,1,1/h do local i={}for g=1,#e[1]do ta
 使用例：
 
 ```lua
+{% raw %}
 points={{2,h/2},{w/2-10,h/4},{w/2+10,h-20},{w-5,30}}
 
 Color(50,0,0)
@@ -57,4 +58,5 @@ points = bezierCurve(points, 300)
 for i,p in pairs(points) do
 	Circle(p[1],p[2],0.1)
 end
+{% endraw %}
 ```
