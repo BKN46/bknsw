@@ -22,7 +22,9 @@ end
 
 ```lua
 -- roll, pitch, yaw (x,y,z)
+{% raw %}
 function rotateMatrix(b,c,d)e,f=math.cos,math.sin;return{{e(d)*e(c),-f(d)*e(b)+e(d)*f(c)*f(b),f(d)*f(b)+e(d)*f(c)*e(b)},{f(d)*e(c),e(d)*e(b)+f(d)*f(c)*f(b),-e(d)*f(b)+f(d)*f(c)*e(b)},{-f(c),e(c)*f(b),e(c)*e(b)}}end
+{% endraw %}
 ```
 
 ## 对角矩阵转换、转出
