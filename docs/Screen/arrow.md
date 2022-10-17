@@ -1,4 +1,4 @@
-# 箭头
+# → 箭头
 
 ```lua
 -- Arrow(screen, x1, y1, x2, y2, length)

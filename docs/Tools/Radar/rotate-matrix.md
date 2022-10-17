@@ -4,7 +4,7 @@
 
 ## 欧拉角旋转矩阵
 
-![rotate-matrix](bkn46.github.io/bknsw/pics/rotate-matrix.png))
+![rotate-matrix](https://bkn46.github.io/bknsw/pics/rotate-matrix.png)
 
 ```lua
 -- roll, pitch, yaw (x,y,z)

@@ -1,4 +1,4 @@
-# table.reduce
+# table的reduce方法
 
 实现table的reduce方法  
 Reference: [Stackoverflow](https://stackoverflow.com/questions/8695378/how-to-sum-a-table-of-numbers-in-lua)  

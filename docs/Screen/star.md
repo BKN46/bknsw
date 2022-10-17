@@ -1,4 +1,4 @@
-# 五角星
+# ⛤ 五角星
 
 ```lua
 -- Star(screen, centerX, centerY, radius)

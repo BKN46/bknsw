@@ -1,4 +1,4 @@
-# string.split
+# 字符串分割为table
 
 实现string.split()函数
 
