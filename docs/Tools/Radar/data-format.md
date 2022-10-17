@@ -4,12 +4,12 @@
 
 ```lua
 function onTick()
-    I,O=input,output
-    GN,GB=I.getNumber,I.getBool
-    SN,SB=O.setNumber,O.setBool
-    TARGET={}
-    for i=1,8 do
-        table.insert(TARGET, {i=GB(i),dist=GN(i*4-3),ang=GN(i*4-2),tilt=GN(i*4-1),time=GN(i*4)})
-    end
+	I,O=input,output
+	GN,GB=I.getNumber,I.getBool
+	SN,SB=O.setNumber,O.setBool
+	TARGET={}
+	for i=1,8 do
+		table.insert(TARGET, {i=GB(i),dist=GN(i*4-3),ang=GN(i*4-2),tilt=GN(i*4-1),time=GN(i*4)})
+	end
 end
 ```

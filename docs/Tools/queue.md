@@ -10,10 +10,10 @@
 S={}
 
 function stackPush(S,MAX,value)
-    table.insert(S,value)
-    if #S > MAX then
-        table.remove(S,1)
-    end
+	table.insert(S,value)
+	if #S > MAX then
+		table.remove(S,1)
+	end
 end
 ```
 
@@ -27,11 +27,11 @@ function stackPush(b,c,d)table.insert(b,d)if#b>c then table.remove(b,1)end end
 
 ```lua
 function tableAvg(S)
-    tmp=0
-    for i=1,#S do
-        tmp=tmp+S[i]
-    end
-    return tmp/#S
+	tmp=0
+	for i=1,#S do
+		tmp=tmp+S[i]
+	end
+	return tmp/#S
 end
 ```
 

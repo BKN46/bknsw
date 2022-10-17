@@ -10,9 +10,9 @@ app = Flask(__name__)
 
 @app.route("/send")
 def get_info():
-    value = request.args.get("value")    
-    print(f"{value}",file=open("data.csv", "a"))
-    return "done"
+	value = request.args.get("value")	
+	print(f"{value}",file=open("data.csv", "a"))
+	return "done"
 ```
 
 ## 直接发送数据
@@ -23,10 +23,10 @@ lua代码中发送数据，设30ticks的间隔，使用5000端口
 INTV=30
 
 if INTV==0 then
-    async.httpGet(5000, string.format("/send?value=%.10f", value))
-    INTV=30
+	async.httpGet(5000, string.format("/send?value=%.10f", value))
+	INTV=30
 else
-    INTV=INTV-1
+	INTV=INTV-1
 end
 
 -- 不带任何回调

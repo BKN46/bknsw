@@ -7,23 +7,23 @@ Q: 过程激励噪声协方差; R: 测量噪声协方差
 KF,Q,R={},0.01,0.001
 
 function kalmanFilter(data)
-    if #KF==0 then
-        for key,value in pairs(data) do
-            pminus=1+Q
-            k=pminus/(pminus+R)
-            p=(1-k)*pminus
-            KF[key]={xhatminus=0,pminus=pminus,k=k,xhat=k*value,p=p}
-        end
-    else
-        for key,value in pairs(data) do
-            xhatminus=KF[key].xhat
-            pminus=KF[key].p+Q
-            k=pminus/(pminus+R)
-            xhat=xhatminus+k*(value-xhatminus)
-            p=(1-k)*pminus
-            KF[key]={xhatminus=xhatminus,pminus=pminus,k=k,xhat=xhat,p=p}
-        end
-    end
+	if #KF==0 then
+		for key,value in pairs(data) do
+			pminus=1+Q
+			k=pminus/(pminus+R)
+			p=(1-k)*pminus
+			KF[key]={xhatminus=0,pminus=pminus,k=k,xhat=k*value,p=p}
+		end
+	else
+		for key,value in pairs(data) do
+			xhatminus=KF[key].xhat
+			pminus=KF[key].p+Q
+			k=pminus/(pminus+R)
+			xhat=xhatminus+k*(value-xhatminus)
+			p=(1-k)*pminus
+			KF[key]={xhatminus=xhatminus,pminus=pminus,k=k,xhat=xhat,p=p}
+		end
+	end
 end
 ```
 

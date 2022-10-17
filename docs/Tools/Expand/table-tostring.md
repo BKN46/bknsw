@@ -5,14 +5,14 @@ Debug的时候很有用
 ```lua
 function dump(o)
    if type(o) == 'table' then
-      local s = '{\n'
-      for k,v in pairs(o) do
-         if type(k) ~= 'number' then k = '"'..k..'"' end
-         s = s .. ''..k..' = ' .. dump(v) .. ',\n'
-      end
-      return s .. '} '
+	  local s = '{\n'
+	  for k,v in pairs(o) do
+		 if type(k) ~= 'number' then k = '"'..k..'"' end
+		 s = s .. ''..k..' = ' .. dump(v) .. ',\n'
+	  end
+	  return s .. '} '
    else
-      return tostring(o)
+	  return tostring(o)
    end
 end
 ```

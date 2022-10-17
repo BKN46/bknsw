@@ -8,12 +8,12 @@
 CLK,INT=0,60
 
 function onTick()
-    if CLK == INT then
-        CLK = 0
-        -- do something
-    else
-        CLK = CLK + 1
-    end
+	if CLK == INT then
+		CLK = 0
+		-- do something
+	else
+		CLK = CLK + 1
+	end
 end
 ```
 
@@ -25,12 +25,12 @@ end
 CLK=false
 
 function onTick()
-    clk=GB(1)
-    if not clk then
-        CLK=false
-    elseif clk and not CLK then
-        CLK=true
-        -- blabla
-    end
+	clk=GB(1)
+	if not clk then
+		CLK=false
+	elseif clk and not CLK then
+		CLK=true
+		-- blabla
+	end
 end
 ```

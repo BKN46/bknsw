@@ -5,9 +5,9 @@
 ```lua
 DBT,DBH,DBX,DBY=60,0,0,0
 function onTick()
-    GN=input.getNumber
-    GB=input.getBool
-    inputX=GN(3)inputY=GN(4)isPressed=GB(1)if isPressed then DBH=DBH+1;DBX=inputX;DBY=inputY end
+	GN=input.getNumber
+	GB=input.getBool
+	inputX=GN(3)inputY=GN(4)isPressed=GB(1)if isPressed then DBH=DBH+1;DBX=inputX;DBY=inputY end
 end
 
 function inRect(b,c,d,e,f,g)return b>d and c>e and b<d+f and c<e+g end

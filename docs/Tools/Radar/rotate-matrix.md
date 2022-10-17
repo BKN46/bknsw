@@ -4,17 +4,17 @@
 
 ## 欧拉角旋转矩阵
 
-<!-- ![rotate-matrix](bkn46.github.io/bknsw/pics/rotate-matrix.png)) -->
+![rotate-matrix](bkn46.github.io/bknsw/pics/rotate-matrix.png))
 
 ```lua
 -- roll, pitch, yaw (x,y,z)
 function rotateMatrix(a,b,c)
-    cos,sin=math.cos,math.sin
-    return {
-        {cos(c)*cos(b), -sin(c)*cos(a)+cos(c)*sin(b)*sin(a), sin(c)*sin(a)+cos(c)*sin(b)*cos(a)},
-        {sin(c)*cos(b), cos(c)*cos(a)+sin(c)*sin(b)*sin(a), -cos(c)*sin(a)+sin(c)*sin(b)*cos(a)},
-        {-sin(b), cos(b)*sin(a), cos(b)*cos(a)},
-    }
+	cos,sin=math.cos,math.sin
+	return {
+		{cos(c)*cos(b), -sin(c)*cos(a)+cos(c)*sin(b)*sin(a), sin(c)*sin(a)+cos(c)*sin(b)*cos(a)},
+		{sin(c)*cos(b), cos(c)*cos(a)+sin(c)*sin(b)*sin(a), -cos(c)*sin(a)+sin(c)*sin(b)*cos(a)},
+		{-sin(b), cos(b)*sin(a), cos(b)*cos(a)},
+	}
 end
 ```
 

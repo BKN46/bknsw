@@ -7,12 +7,12 @@
 ```lua
 -- Curve(screen, centerX, centerY, radius, width, startAngle, endAngle)
 function Curve(screen, cx, cy, radius, width, sa, ea)
-    for i=sa,ea,1 do
-        angle=math.rad(i-90)
-        sx,sy=cx+math.cos(angle)*radius,cy+math.sin(angle)*radius
-        ex,ey=sx-math.cos(angle)*width,sy-math.sin(angle)*width
-        screen.drawLine(sx,sy,ex,ey)
-    end
+	for i=sa,ea,1 do
+		angle=math.rad(i-90)
+		sx,sy=cx+math.cos(angle)*radius,cy+math.sin(angle)*radius
+		ex,ey=sx-math.cos(angle)*width,sy-math.sin(angle)*width
+		screen.drawLine(sx,sy,ex,ey)
+	end
 end
 ```
 
