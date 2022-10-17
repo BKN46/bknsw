@@ -30,9 +30,11 @@ function rotateMatrix(b,c,d)e,f=math.cos,math.sin;return{{e(d)*e(c),-f(d)*e(b)+e
 ## 对角矩阵转换、转出
 
 ```lua
+{% raw %}
 function matXYZ(x,y,z) return{{x,x,x},{y,y,y},{z,z,z}} end
 
 function dematXYZ(mat) return{x=mat[1][1],y=mat[2][2],z=mat[3][3]} end
+{% endraw %}
 ```
 
 ## 合在一起
