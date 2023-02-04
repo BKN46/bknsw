@@ -22,11 +22,16 @@ lua代码中发送数据，设30ticks的间隔，使用5000端口
 ```lua
 INTV=30
 
-if INTV==0 then
-	async.httpGet(5000, string.format("/send?value=%.10f", value))
-	INTV=30
-else
-	INTV=INTV-1
+function onTick()
+	-- csv格式每行字符串，英文逗号分隔，里面随便夹东西
+	value="1,1,1"
+
+	if INTV==0 then
+		async.httpGet(5000, string.format("/send?value=%s", value))
+		INTV=30
+	else
+		INTV=INTV-1
+	end
 end
 
 -- 不带任何回调
