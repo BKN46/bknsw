@@ -3,6 +3,7 @@
 凹包算法
 
 ```lua
+{% raw %}
 function bPointInPolygen(posList, posTarget)
     local polygenSides = #posList
     local flag = 0
@@ -34,4 +35,5 @@ function bPointInPolygen(posList, posTarget)
         return true
     end
 end
+{% endraw %}
 ```

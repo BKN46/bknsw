@@ -3,6 +3,7 @@
 有的时候需要延迟执行一些函数，这时候就将需要执行的任务放在一个表中，每tick检查是否到了执行时间，如果到了就执行并移出表
 
 ```lua
+{% raw %}
 DELAY_EVENTS = {}
 
 function addDelay(time, do_func, param)
@@ -23,4 +24,5 @@ function onTick(game_ticks)
         end
     end
 end
+{% endraw %}
 ```
