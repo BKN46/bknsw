@@ -3,6 +3,7 @@
 有的时候需要运作较为复杂机械的结构，使用微控连线的方式会非常难以开发，所以使用lua的形式读取所有的机械输入与输出
 
 ```lua
+{% raw %}
 -- 初始状态
 STATE=0
 
@@ -109,11 +110,13 @@ end
 function RAIL_TO(a,b)
 	return a-b>0.1,a-b<-0.1
 end
+{% endraw %}
 ```
 
 另一个简化版本，只需要填input和output的四个table，以及STATE_MACHINE函数主体就能用
 
 ```lua
+{% raw %}
 STATE=0
 I_BOOL={false,}
 I_NUM={0,0,0,0,0,0,0,}
@@ -155,4 +158,5 @@ end
 function RAIL_TO(a,b)
 	return a-b>0.1,a-b<-0.1
 end
+{% endraw %}
 ```
