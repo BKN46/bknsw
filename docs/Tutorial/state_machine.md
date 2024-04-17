@@ -67,25 +67,25 @@ function STATE_MACHINE()
 	if STATE=0 then
 		Rail_1_Up,Rail_1_Down=RAIL_TO(Rail_1_Dist,1)
 		Rail_2_Up,Rail_2_Down=RAIL_TO(Rail_2_Dist,1)
-	if STATE=1 then
+	elseif STATE==1 then
 		Rail_1_Up,Rail_1_Down=RAIL_TO(Rail_1_Dist,1+0.5*ROD_COUNT)
 		Rail_2_Up,Rail_2_Down=RAIL_TO(Rail_2_Dist,0)
 		Rod_Hold=true
 		NEXT_STATE_IN(180,2)
-	if STATE=2 then
+	elseif STATE==2 then
 		Rail_1_Up,Rail_1_Down=RAIL_TO(Rail_1_Dist,0.5)
 		Rail_2_Up,Rail_2_Down=RAIL_TO(Rail_2_Dist,0.5)
 		Rod_Slide=1
 		Rod_Hold=true
 		NEXT_STATE_IN(300,3)
-	if STATE=3 then
+	elseif STATE==3 then
 		Rail_1_Up,Rail_1_Down=RAIL_TO(Rail_1_Dist,0)
 		Rail_2_Up,Rail_2_Down=RAIL_TO(Rail_2_Dist,0.25)
 		Rod_Slide=-1
 		Rotate_1=1
 		Rod_Hold=true
 		NEXT_STATE_IN(600,4)
-	if STATE=3 then
+	elseif STATE==4 then
 		Rail_2_Up,Rail_2_Down=RAIL_TO(Rail_2_Dist,2)
 		Rotate_1=1
 		NEXT_STATE_IN(180,0)
