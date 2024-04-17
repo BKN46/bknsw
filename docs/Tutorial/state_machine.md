@@ -110,3 +110,49 @@ function RAIL_TO(a,b)
 	return a-b>0.1,a-b<-0.1
 end
 ```
+
+另一个简化版本，只需要填input和output的四个table，以及STATE_MACHINE函数主体就能用
+
+```lua
+STATE=0
+I_BOOL={false,}
+I_NUM={0,0,0,0,0,0,0,}
+O_BOOL={false,false,false,}
+O_NUM={0,0,0,0,0,}
+
+TIMER,TIMER_HOLDER=0,false
+
+function onTick()
+	I,O=input,output
+	GN,GB=I.getNumber,I.getBool
+	SN,SB=O.setNumber,O.setBool
+
+	for i,v in ipairs(I_BOOL) do I_BOOL[i]=GB(i) end
+	for i,v in ipairs(I_NUM) do I_NUM[i]=GN(i) end
+
+	STATE_MACHINE()
+
+	for i,v in ipairs(O_BOOL) do SB(i,v) end
+	for i,v in ipairs(O_NUM) do SN(i,v) end
+end
+
+function STATE_MACHINE()
+	if STATE==0 then
+		O_BOOL[1]=false
+	end
+end
+
+function NEXT_STATE_IN(time, state)
+	if TIMER==0 and not TIMER_HOLDER then
+		TIMER,TIMER_HOLDER=time,true
+	elseif TIMER==0 then
+		STATE,TIMER_HOLDER=state,false
+	else
+		TIMER=TIMER-1
+	end
+end
+
+function RAIL_TO(a,b)
+	return a-b>0.1,a-b<-0.1
+end
+```
